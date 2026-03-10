@@ -1,0 +1,20 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="cmd-ai",
+    version="1.0.0",
+    description="AI-powered Linux command suggestion tool",
+    author="sameer Tiruwa",
+    packages=find_packages(),
+    install_requires=[
+        "click>=8.0",
+        "openai>=1.0",
+        "rich>=13.0",
+    ],
+    entry_points={
+        "console_scripts": [
+            "cmd-ai=cmd_ai.main:cli",
+        ],
+    },
+    python_requires=">=3.8",
+)
